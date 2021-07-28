@@ -1,12 +1,12 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { CreateProductDto } from '../../domain/product.dto';
+import { CreateProductDto } from '../../domain/create-product.dto';
 import { ProductRepoPort } from '../../domain/product.port';
 import ProductFactory from '../product.factory';
 
 @Injectable()
 export default class CreateProductUseCase {
   constructor(
-    @Inject('ProductRepository')
+    @Inject('ProductService')
     private productRepository: ProductRepoPort,
     private productFactory: ProductFactory,
   ) {}

@@ -2,14 +2,14 @@ import { Inject, Injectable } from '@nestjs/common';
 import { ProductRepoPort } from '../../domain/product.port';
 
 @Injectable()
-export default class GetAllProductsUseCase {
+export default class FindProductUseCase {
   constructor(
-    @Inject('ProductRepository')
+    @Inject('ProductService')
     private productRepository: ProductRepoPort,
   ) {}
 
   // Return from the repository
-  handler() {
-    return this.productRepository.findAll();
+  handler(id: number) {
+    return this.productRepository.findOne(id);
   }
 }

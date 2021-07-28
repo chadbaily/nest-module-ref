@@ -4,6 +4,8 @@ import { Product } from './product.entity';
 
 export interface ProductRepoPort {
   findAll(): Observable<Product[]>;
-  find(id: number): Observable<Product>;
+  findOne(id: number): Observable<Product>;
   create(product: Product): Observable<Product>;
+  update(product: Product): Observable<Product>;
+  remove(id: number): Observable<Product>;
 }
