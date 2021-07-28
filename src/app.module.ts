@@ -14,9 +14,9 @@ import { ApplicationModule } from './products/application/application.module';
       type: 'postgres',
       host: 'localhost', // database port
       port: 5432, // database port
-      username: 'neerpg', // username
+      username: 'postgres', // username
       password: 'pass123', // user password
-      database: 'neerpg', // name of our database,
+      database: 'postgres', // name of our database,
       autoLoadEntities: true, // models will be loaded automatically
       synchronize: true, // your entities will be synced with the database(recommended: disable in prod)
     }),
